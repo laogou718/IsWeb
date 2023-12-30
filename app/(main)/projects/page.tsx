@@ -1,7 +1,7 @@
 import { type Metadata } from 'next'
 
 import { Projects } from '~/app/(main)/projects/Projects'
-import { StoreIcon } from '~/assets'
+import { StoreIcon } from '~/assets/icons/StoreIcon'
 import { Container } from '~/components/ui/Container'
 
 const title = '我的一些项目'
