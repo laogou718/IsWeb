@@ -2,10 +2,9 @@ import Image, { type StaticImageData } from 'next/image'
 import React from 'react'
 
 import { BriefcaseIcon } from '~/assets'
-import eightNinthsLogo from '~/assets/company/8ninths.jpeg'
-import abletiveLogo from '~/assets/company/abletive.png'
-import vvsLogo from '~/assets/company/vvs.png'
-import zolplayLogo from '~/assets/company/zolplay.png'
+import AI from '~/assets/company/AI.jpg'
+import CUT from '~/assets/company/CUT.jpg'
+import UP from '~/assets/company/UP.jpg'
 
 type Resume = {
   company: string
@@ -16,35 +15,31 @@ type Resume = {
 }
 const resume: Resume[] = [
   {
-    company: '深圳市佐玩信息技术有限公司',
-    title: '创始人 CEO',
-    logo: zolplayLogo,
-    start: '2021',
+    company: 'AI纪元系列视频',
+    title: '始于三月份',
+    logo: AI,
+    start: '2023',
     end: {
       label: '至今',
       dateTime: new Date().getFullYear(),
     },
   },
   {
-    company: 'very very spaceship',
-    title: '软件工程师',
-    logo: vvsLogo,
+    company: 'Pr剪辑系列教程',
+    title: '快乐的起点',
+    logo: CUT,
     start: '2018',
-    end: '2020',
+    end: '2022',
   },
   {
-    company: '8ninths Inc.',
-    title: 'AR & 全栈工程师',
-    logo: eightNinthsLogo,
-    start: '2017',
-    end: '2018',
-  },
-  {
-    company: 'Abletive',
-    title: '创始人',
-    logo: abletiveLogo,
-    start: '2014',
-    end: '2016',
+    company: '互联网原创视频作者',
+    title: '动漫、知识、剪辑',
+    logo: UP,
+    start: '2012',
+    end: {
+      label: '至今',
+      dateTime: new Date().getFullYear(),
+    },
   },
 ]
 
@@ -65,7 +60,7 @@ export function Resume() {
     <div className="rounded-2xl border border-zinc-100 p-6 dark:border-zinc-700/40">
       <h2 className="flex items-center text-sm font-semibold text-zinc-900 dark:text-zinc-100">
         <BriefcaseIcon className="h-5 w-5 flex-none" />
-        <span className="ml-2">工作经历</span>
+        <span className="ml-2">过往经历</span>
       </h2>
       <ol className="mt-6 space-y-4">
         {resume.map((role, roleIndex) => (
@@ -79,11 +74,11 @@ export function Resume() {
               />
             </div>
             <dl className="flex flex-auto flex-wrap gap-x-2">
-              <dt className="sr-only">公司</dt>
+              <dt className="sr-only">事件</dt>
               <dd className="w-full flex-none text-sm font-medium text-zinc-900 dark:text-zinc-100">
                 {role.company}
               </dd>
-              <dt className="sr-only">职位</dt>
+              <dt className="sr-only">概述</dt>
               <dd className="text-xs text-zinc-500 dark:text-zinc-400">
                 {role.title}
               </dd>
