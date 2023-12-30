@@ -1,11 +1,12 @@
 import { type Metadata } from 'next'
 
 import { Projects } from '~/app/(main)/projects/Projects'
+import { StoreIcon } from '~/assets'
 import { Container } from '~/components/ui/Container'
 
-const title = '我的项目'
+const title = '我的一些项目'
 const description =
-  '多年来，我一直在做各种各样的小项目，这里就是我筛选出来我觉得还不错的项目合集，也是我在技术领域中尝试和探索的最好见证。'
+  '个人做了各种各样的小项目，这里是我能翻找到的，后面会持续更新。'
 export const metadata = {
   title,
   description,
@@ -22,15 +23,20 @@ export const metadata = {
 
 export default function ProjectsPage() {
   return (
-    <Container className="mt-16 sm:mt-32">
+    <Container className="mt-12 sm:mt-24">
       <header className="max-w-2xl">
-        <h1 className="text-4xl font-bold tracking-tight text-zinc-800 dark:text-zinc-100 sm:text-5xl">
-          我过去的项目冒险之旅。
+        <h1 className="text-3xl font-bold tracking-tight text-zinc-800 dark:text-zinc-100 sm:text-5xl text-justify">
+          <StoreIcon className="mb-2 mr-2 text-4xl sm:text-6xl inline-flex transform-gpu transition-transform duration-500 hover:rotate-180"/>
+          <span>
+            我的项目库
+          </span>
         </h1>
         <p className="mt-6 text-base text-zinc-600 dark:text-zinc-400">
-          多年来，我一直在做各种各样的小项目，有<b>开源</b>的，有<b>实验</b>
-          的，也有 <b>just for fun </b>
-          的，下面就是我筛选出来我觉得还不错的项目合集，也是我在技术领域中尝试和探索的最好见证。
+          🤯 鄙人不才,没有做过什么大项目，但也想着有一天能<b>开源</b>点东西,
+          也许以后有<b>机会</b>去做开源项目,<b>也许这一天</b>马上会来!
+        <br/>
+          下面是一些
+          <strong className="underline decoration-2 underline-offset-4 decoration-wavy decoration-lime-500">曾经做过的项目</strong>,如果你有兴趣的话,可以看看。
         </p>
       </header>
       <div className="mt-16 sm:mt-20">
