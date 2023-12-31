@@ -163,6 +163,7 @@ export function GuestbookInput() {
       </div>
 
       <div className="z-10 h-8 w-8 shrink-0 md:h-10 md:w-10">
+        {user && (
         <Image
           src={user.imageUrl}
           alt=""
@@ -170,7 +171,9 @@ export function GuestbookInput() {
           height={40}
           className="h-8 w-8 select-none rounded-full md:h-10 md:w-10"
           unoptimized
-        />
+          />
+        )}
+
       </div>
 
       <div className="z-10 ml-2 flex-1 shrink-0 md:ml-4">
